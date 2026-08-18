@@ -1,7 +1,8 @@
 #include <iostream>
 #include <math.h>
 
-//FEITO PQ O THIAGO DEU A IDEIA - RENATO
+//pra compilar como exe e rodar em todos os pcs
+//g++ calcintder.cpp -o calcintder.exe -static -static-libgcc -static-libstdc++
 
 int main()
 {
@@ -10,7 +11,6 @@ int main()
     int opcao1, opcao2, opcao3;
     float a, b, c, d, e, f, g, h, i, j;
 
-    std::cout << "feito pq o thiago deu a ideia";
     std::cout << "\n";
 
     std::cout << "Derivada (1) ou Integral (2): ";
@@ -120,7 +120,7 @@ int main()
 
         case 2:
                 
-        std::cout << "Sozinha (0), Soma(1), Subtracao (2)";
+        std::cout << "Sozinha (0), Soma(1), Subtracao (2), Definida (3)";
         std::cout << "\n";
         std::cin >> opcao2;
 
@@ -171,6 +171,23 @@ int main()
             std::cout << "( " << a << "x^" << b + 1 << " )" << " / " << b + 1 << " - " << "( " << c  << "x^" << d + 1 << " )" << " / " << b + 1 << " + C";
             std::cout << "\n";
             break;
+
+         case 3:
+
+         std::cout << "A: ";
+         std::cin >> a;
+         std::cout << "N: ";
+         std::cin >> b;
+         std::cout << "De: ";
+         std::cin >> c;
+         std::cout << "Ate: ";
+         std::cin >> d;
+         e = b + 1;
+         f = (a * pow(c, e))/e;
+         g = (a * pow(d, e))/e;
+         std::cout << g - f;
+         break;
+
     }
     }
 
